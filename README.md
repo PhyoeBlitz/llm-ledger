@@ -120,7 +120,7 @@ Costs are **estimates** computed from published per-token prices. Your invoice i
 Contributions are welcome — bug fixes, new provider support, pricing updates, and docs improvements all help.
 
 ```bash
-git clone https://github.com/<your-username>/llm-ledger.git
+git clone https://github.com/PhyoeBlitz/llm-ledger.git
 cd llm-ledger
 npm install
 npm test
