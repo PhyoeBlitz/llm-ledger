@@ -45,7 +45,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/phyoeblitz/llm-ledger.git"
+    "url": "git+https://github.com/PhyoeBlitz/llm-ledger.git"
   },
   "devDependencies": {
     "tsup": "^8.5.1",
