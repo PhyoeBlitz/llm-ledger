@@ -115,6 +115,23 @@ Unknown models throw by default; pass `new CostTracker({ onUnknownModel: "zero" 
 
 Costs are **estimates** computed from published per-token prices. Your invoice is the source of truth — batch discounts, fast mode, regional pricing, and provider-side adjustments are not modeled. Always verify current prices for your account.
 
+## Contributing
+
+Contributions are welcome — bug fixes, new provider support, pricing updates, and docs improvements all help.
+
+```bash
+git clone https://github.com/<your-username>/llm-ledger.git
+cd llm-ledger
+npm install
+npm test
+```
+
+Open a pull request against `main` once `npm run build` and `npm test` pass. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full guide, including coding conventions and how to report bugs.
+
+## Author
+
+Created by [phyoeblitz](https://github.com/PhyoeBlitz)
+
 ## License
 
-MIT
+[MIT](./LICENSE)
