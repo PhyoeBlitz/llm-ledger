@@ -3,6 +3,7 @@ name: Publish to npm
 on:
   release:
     types: [published]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -13,10 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # No registry-url here: setup-node would write an .npmrc with a
+      # placeholder auth token, which makes npm skip the OIDC exchange.
+      # Trusted publishing needs no token config at all.
       - uses: actions/setup-node@v4
         with:
           node-version: 24.x
-          registry-url: https://registry.npmjs.org
           cache: npm
       # Trusted publishing needs a recent npm CLI
       - run: npm install -g npm@latest
