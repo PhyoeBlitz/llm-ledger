@@ -13,7 +13,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       # No registry-url here: setup-node would write an .npmrc with a
       # placeholder auth token, which makes npm skip the OIDC exchange.
       # Trusted publishing needs no token config at all.
