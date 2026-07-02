@@ -72,7 +72,7 @@ const EMPTY: TokenUsage = {
  */
 export function normalizeUsage(raw: unknown): TokenUsage {
   if (raw == null || typeof raw !== "object") {
-    throw new TypeError("token-ledger: usage must be an object, got " + typeof raw);
+    throw new TypeError("llm-ledger: usage must be an object, got " + typeof raw);
   }
   const u = raw as Record<string, unknown>;
 
@@ -115,7 +115,7 @@ export function normalizeUsage(raw: unknown): TokenUsage {
   }
 
   throw new TypeError(
-    "token-ledger: unrecognized usage shape. Expected Anthropic ({input_tokens, output_tokens}), " +
+    "llm-ledger: unrecognized usage shape. Expected Anthropic ({input_tokens, output_tokens}), " +
     "OpenAI ({prompt_tokens, completion_tokens}), or neutral ({inputTokens, outputTokens}). " +
     "Got keys: " + Object.keys(u).join(", "),
   );

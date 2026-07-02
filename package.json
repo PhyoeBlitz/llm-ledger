@@ -1,5 +1,5 @@
 {
-  "name": "token-ledger",
+  "name": "llm-ledger",
   "version": "0.1.0",
   "description": "Zero-dependency token usage and cost tracker for LLM APIs (Anthropic Claude, OpenAI, and any custom model). Track spend, cache savings, and budgets across requests.",
   "type": "module",
@@ -45,7 +45,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/phyoeblitz/token-ledger.git"
+    "url": "git+https://github.com/phyoeblitz/llm-ledger.git"
   },
   "devDependencies": {
     "tsup": "^8.0.0",

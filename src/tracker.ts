@@ -39,7 +39,7 @@ export function estimateCost(model: string, usage: unknown): number {
   const pricing = getPricing(model);
   if (!pricing) {
     throw new Error(
-      `token-ledger: no pricing for model "${model}". ` +
+      `llm-ledger: no pricing for model "${model}". ` +
       `Register it first: registerPricing("${model}", { input: <$/MTok>, output: <$/MTok> })`,
     );
   }
@@ -78,11 +78,11 @@ export class CostTracker {
     const model = opts.model ?? response.model;
     if (!model) {
       throw new Error(
-        "token-ledger: response has no .model field; pass one explicitly: track(response, { model })",
+        "llm-ledger: response has no .model field; pass one explicitly: track(response, { model })",
       );
     }
     if (response.usage == null) {
-      throw new Error("token-ledger: response has no .usage field");
+      throw new Error("llm-ledger: response has no .usage field");
     }
     return this.record(model, response.usage, opts.tag);
   }
@@ -100,7 +100,7 @@ export class CostTracker {
         (normalized.cacheReadTokens * (pricing.input - pricing.cacheRead)) / 1_000_000;
     } else if ((this.options.onUnknownModel ?? "throw") === "throw") {
       throw new Error(
-        `token-ledger: no pricing for model "${model}". ` +
+        `llm-ledger: no pricing for model "${model}". ` +
         `Register it with registerPricing(), or construct the tracker with { onUnknownModel: "zero" }`,
       );
     }

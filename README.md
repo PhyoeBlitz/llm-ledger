@@ -1,4 +1,4 @@
-# token-ledger
+# llm-ledger
 
 Zero-dependency token usage and cost tracker for LLM APIs. Feed it raw API responses from **Anthropic Claude** or **OpenAI** (or any provider via custom pricing) and get running totals, per-model breakdowns, cache savings, and budget alerts.
 
@@ -12,14 +12,14 @@ Zero-dependency token usage and cost tracker for LLM APIs. Feed it raw API respo
 ## Install
 
 ```bash
-npm install token-ledger
+npm install llm-ledger
 ```
 
 ## Quick start (Anthropic)
 
 ```ts
 import Anthropic from "@anthropic-ai/sdk";
-import { CostTracker } from "token-ledger";
+import { CostTracker } from "llm-ledger";
 
 const client = new Anthropic();
 const tracker = new CostTracker({
@@ -46,7 +46,7 @@ console.log(tracker.byModel());
 Prices for non-Anthropic models are **not** hardcoded (so they can never be silently stale) — register them once with your current rates:
 
 ```ts
-import { CostTracker, registerPricing } from "token-ledger";
+import { CostTracker, registerPricing } from "llm-ledger";
 
 registerPricing("gpt-4o", { input: 2.5, output: 10 }); // your current $/MTok
 
@@ -58,7 +58,7 @@ tracker.track(completion); // prompt_tokens / cached_tokens handled automaticall
 ## One-off estimates
 
 ```ts
-import { estimateCost } from "token-ledger";
+import { estimateCost } from "llm-ledger";
 
 estimateCost("claude-sonnet-5", { input_tokens: 2000, output_tokens: 1000 });
 // => 0.021
