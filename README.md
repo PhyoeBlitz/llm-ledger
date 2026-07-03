@@ -111,6 +111,10 @@ registerPricing("my-local-llama", { input: 0, output: 0 });
 
 Unknown models throw by default; pass `new CostTracker({ onUnknownModel: "zero" })` to record their tokens with cost 0 instead.
 
+## Examples
+
+- [llm-token-calculator](https://github.com/PhyoeBlitz/llm-token-calculator) — a React + TypeScript app for estimating LLM spend interactively: pick a built-in model or register a custom one, enter token counts, and see running totals, a per-model breakdown, and cache savings via `CostTracker`.
+
 ## Disclaimer
 
 Costs are **estimates** computed from published per-token prices. Your invoice is the source of truth — batch discounts, fast mode, regional pricing, and provider-side adjustments are not modeled. Always verify current prices for your account.
