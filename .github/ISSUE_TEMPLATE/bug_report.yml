@@ -1,0 +1,42 @@
+name: Bug report
+description: Report incorrect cost/token calculations, normalization bugs, or other unexpected behavior.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug and what you expected instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: usage-object
+    attributes:
+      label: Raw usage object / model id
+      description: |
+        If this is a normalization or pricing issue, paste the raw `usage` object
+        (and `model` id) you passed in. Redact anything sensitive.
+      render: json
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Minimal code snippet that reproduces the issue.
+      render: ts
+
+  - type: input
+    id: version
+    attributes:
+      label: llm-ledger version
+      placeholder: "1.0.1"
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Runtime
+      placeholder: "Node 22 / Bun 1.2 / Deno 2 / browser (Chrome 130)"

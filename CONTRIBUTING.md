@@ -48,12 +48,8 @@ Please add or update tests in `test/` for any behavior change. PRs that change p
 
 ## Reporting bugs / requesting features
 
-Open an issue with:
-
-- A clear description of the problem or request
-- Steps to reproduce (for bugs), including the raw `usage` object if it's a normalization/pricing issue
-- Expected vs. actual behavior
+Open an issue using the [bug report](https://github.com/PhyoeBlitz/llm-ledger/issues/new?template=bug_report.yml) or [feature request](https://github.com/PhyoeBlitz/llm-ledger/issues/new?template=feature_request.yml) template. For security vulnerabilities, see [SECURITY.md](./SECURITY.md) instead of opening a public issue.
 
 ## Code of conduct
 
-Be respectful and constructive. This project welcomes contributors of all experience levels.
+This project follows a [Code of Conduct](./CODE_OF_CONDUCT.md). By participating, you're expected to uphold it.
