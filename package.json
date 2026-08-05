@@ -1,6 +1,6 @@
 {
   "name": "llm-ledger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Zero-dependency token usage and cost tracker for LLM APIs (Anthropic Claude, OpenAI, and any custom model). Track spend, cache savings, and budgets across requests.",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -49,7 +49,7 @@
   },
   "devDependencies": {
     "tsup": "^8.5.1",
-    "typescript": "^7.0.0",
+    "typescript": "^6.0.3",
     "vitest": "^4.1.9"
   },
   "overrides": {
