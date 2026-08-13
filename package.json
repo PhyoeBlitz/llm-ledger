@@ -1,6 +1,6 @@
 {
   "name": "llm-ledger",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Zero-dependency token usage and cost tracker for LLM APIs (Anthropic Claude, OpenAI, and any custom model). Track spend, cache savings, and budgets across requests.",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -46,6 +46,10 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PhyoeBlitz/llm-ledger.git"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/PhyoeBlitz"
   },
   "devDependencies": {
     "tsup": "^8.5.1",
